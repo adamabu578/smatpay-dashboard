@@ -3,10 +3,10 @@
 import { useState } from "react"
 import { CreditCard, Wallet } from "lucide-react"
 
-function BuyAirtime() {
+function Subscription() {
   const [network, setNetwork] = useState("")
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [amount, setAmount] = useState("")
+//   const [phoneNumber, setPhoneNumber] = useState("")
+//   const [amount, setAmount] = useState("")
   const [paymentMethod, setPaymentMethod] = useState("")
 
   const purchaseHistory = [
@@ -159,4 +159,4 @@ function BuyAirtime() {
   )
 }
 
-export default BuyAirtime
+export default Subscription

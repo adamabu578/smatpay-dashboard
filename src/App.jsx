@@ -24,6 +24,8 @@ import { WalletMinimal } from 'lucide-react';
 import { Wrench } from 'lucide-react';
 import Epin from "./Components/Epin/Epin"
 import Electricity from "./Components/Electricity/Electricity"
+import TvSubscription from "./Components/Tv-subscription/TvSubscription"
+import Subscription from "./Components/Tv-subscription/TvSubscription"
 
 
 function App() {
@@ -40,13 +42,11 @@ function App() {
               <Route path="/my-dashboard" element={<MyDashboard />} />
               <Route path="/send-sms" element={<SendSMS />} />
               <Route path="/cloud-compose" element={<CloudCompose />} />
-               {/* <Route path="/SendVoiceOTP" element={<SendVoiceOTP />} /> 
-              <Route path="/VoiceOTPLog" element={<VoiceOTPLog />} />  */}
               <Route path="/BuyAirtime" element={<BuyAirtime />} />  
               <Route path="/BuyData" element={<BuyData />} />
               <Route path="/Epin" element={<Epin/>} />
               <Route path="/Electricity" element={<Electricity/>} />
-              
+              <Route path="/Subscription" element={<Subscription/>} /> 
             </Routes>
           </div>
         </main>
@@ -95,6 +95,7 @@ function Sidebar() {
     developertools: false,
     referearn: false,
     mytool: false,
+    tvsubscription: false,
 
   })
 
@@ -256,6 +257,24 @@ function Sidebar() {
             </div>
           )}
         </div>
+
+        <div className="nav-item with-submenu">
+          <div className="nav-item-header" onClick={() => toggleMenu("tvsubscription")}>
+          <Plug size={20} />
+            <span>Tv-Subscription</span>
+            {openMenus.tvsubscription ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+          </div>
+
+          {openMenus.tvsubscription && (
+            <div className="submenu">
+              <Link to="/Subscription" className="submenu-item">
+               Tv-subscription
+              </Link>
+          
+            </div>
+          )}
+        </div>
+
 
         <div className="nav-item with-submenu">
           <div className="nav-item-header" onClick={() => toggleMenu("mywallet")}>
