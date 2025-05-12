@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-function SendSMS() {
+function SendSms() {
   const [message, setMessage] = useState("")
   const [recipient, setRecipient] = useState("")
   const [isSending, setIsSending] = useState(false)
@@ -98,5 +98,5 @@ function SendSMS() {
   )
 }
 
-export default SendSMS
+export default SendSms
 

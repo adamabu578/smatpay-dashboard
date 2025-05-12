@@ -7,7 +7,7 @@ import "./App.css"
 
 // Pages
 import Dashboard from "./Components/Dashboard"
-import SendSMS from "./Components/SendSms"
+import SendSms from "./Components/SendSMS"
 import BuyAirtime from "./Components/Airtime/BuyAirtime"
 import BuyData from "./Components/BuyData/BuyData"
 import CloudCompose from "./Components/CloudCompose"
@@ -40,7 +40,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/my-dashboard" element={<MyDashboard />} />
-              <Route path="/send-sms" element={<SendSMS />} />
+              <Route path="/send-sms" element={<SendSms />} />
               <Route path="/cloud-compose" element={<CloudCompose />} />
               <Route path="/BuyAirtime" element={<BuyAirtime />} />  
               <Route path="/BuyData" element={<BuyData />} />
@@ -235,8 +235,7 @@ function Sidebar() {
             </div>
           )}
         </div>
-
-        <div className="nav-item with-submenu">
+        <div className="nav-item with-submenu ">
           <div className="nav-item-header" onClick={() => toggleMenu("electricity")}>
           <Plug size={20} />
             <span>Electricity</span>
@@ -248,12 +247,6 @@ function Sidebar() {
               <Link to="/Electricity" className="submenu-item">
                Buy Electricity Token/Bill
               </Link>
-              {/* <Link to="/ElectricityHistory" className="submenu-item">
-                Electricity History
-              </Link>
-              <Link to="/MyMeters" className="submenu-item">
-              My Meters
-              </Link> */}
             </div>
           )}
         </div>
